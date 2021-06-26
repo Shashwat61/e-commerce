@@ -6,7 +6,7 @@ export const fetchProducts=()=>{
         dispatch({
           type:FETCH_PRODUCT_REQUEST
         })
-        axios.get('https://fakestoreapi.com/products')
+        axios.get('https://fakestoreapi.com/products?limit=12')
         .then((res)=>{
             dispatch({
                 type:FETCH_PRODUCT_SUCCESS,

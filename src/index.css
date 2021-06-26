@@ -6,6 +6,7 @@
 
 body{
     background-color:#fff;
+    position: relative;
 }
 body::-webkit-scrollbar{
     display: none;

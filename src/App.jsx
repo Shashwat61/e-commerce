@@ -9,9 +9,9 @@ import Sidebar from './components/sidebar/Sidebar'
 import Footer from './components/footer/Footer';
 export const Layout=({children})=>{
   return (
-   <div>
+   <div className="mx-4 text-xs sm:text-sm md:text-base">
      <Header/>
-     <div className="flex pt-10 mx-4 ">
+     <div className="pt-10 sm:flex ">
      <Sidebar/>
      <div className="w-full">
      {children}

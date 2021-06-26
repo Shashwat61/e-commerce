@@ -1,12 +1,13 @@
 import React from 'react'
 
-function Products() {
+function Products({product}) {
+    console.log(product)
     return (
-        <div className="grid lg:mb-4 sm:m-2 max-w-max-content place-items-center">
-         <img className="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxoAEqHxEttSuRD7GH2TGjIvlpXifBOXlOHiTzXgmWlIxfbkIdfP8t1C3QZ0r1GnrCrqw&usqp=CAU" alt=""/>
+        <div className="grid m-4 lg:mb-4 max-w-max-content place-items-center">
+         <img className="object-contain w-full h-32" src={product.image} alt={product.category}/>
          <div className="flex flex-col items-center">
-             <span>Stealth Bomber Jacket - Navy</span>
-             <span>$1,599.95</span>
+             <span>{product.title}</span>
+             <span>${product.price}</span>
          </div>
         </div>
     )
