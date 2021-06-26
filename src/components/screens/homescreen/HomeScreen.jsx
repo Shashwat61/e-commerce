@@ -1,9 +1,11 @@
 import React from 'react'
-
+import FeaturedCollection from '../../featuredcollection/FeaturedCollection'
+import ExtraFeaturedCollection from '../../extrafeaturedcollection/ExtraFeaturedCollection'
 function HomeScreen() {
     return (
-        <div>
-        <h1>HomeScreen</h1>
+        <div className="px-8 py-32 ">
+         <FeaturedCollection/>
+         <ExtraFeaturedCollection/>
         </div>
     )
 }

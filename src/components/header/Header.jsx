@@ -2,7 +2,7 @@ import React from 'react'
 import {AiOutlineSearch,AiOutlineShoppingCart} from 'react-icons/ai'
 function Header() {
     return (
-        <div className="flex items-center justify-between h-12 px-2 border-b border-bordercolor ">
+        <div className="flex items-center justify-between h-12 mx-4 border-b border-bordercolor ">
         
          <form className="flex items-center w-full">
              <AiOutlineSearch className="mr-2" size={26}/>
