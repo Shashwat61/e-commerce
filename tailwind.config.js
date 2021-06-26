@@ -12,6 +12,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      colors:{
+        bordercolor:'#4c4c4c',
+      },
       fontWeight: ['hover', 'focus'],
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
