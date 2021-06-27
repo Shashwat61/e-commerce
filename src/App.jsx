@@ -7,6 +7,7 @@ import HomeScreen from './components/screens/homescreen/HomeScreen'
 import Header from './components/header/Header'
 import Sidebar from './components/sidebar/Sidebar'
 import Footer from './components/footer/Footer';
+import SingleItem from './components/singleitem/SingleItem'
 export const Layout=({children})=>{
   return (
    <div className="mx-4 text-xs sm:text-sm md:text-base">
@@ -40,6 +41,13 @@ const App = () => {
           <HomeScreen/>
         </Layout>
       </Route>
+      <Route path='/view/:id'>
+        <Layout>
+          <SingleItem/>
+        </Layout>
+      </Route>
+
+      
     </Switch>
   </Router>
   );

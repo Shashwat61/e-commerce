@@ -1,5 +1,5 @@
 import axios from "axios"
-import { FETCH_PRODUCT_FAILED, FETCH_PRODUCT_REQUEST, FETCH_PRODUCT_SUCCESS } from "../actiontypes"
+import { FETCH_PRODUCT_FAILED, FETCH_PRODUCT_REQUEST, FETCH_PRODUCT_SUCCESS, GET_SINGLEPRODUCT_ID } from "../actiontypes"
 
 export const fetchProducts=()=>{
     return (dispatch)=>{
@@ -20,4 +20,13 @@ export const fetchProducts=()=>{
             })
         })
     }
+}
+
+export const getSingleProduct=(item)=>{
+    console.log(item)
+  
+        return {
+            type:GET_SINGLEPRODUCT_ID,
+            payload:item,
+   }
 }
