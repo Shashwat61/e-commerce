@@ -19,7 +19,8 @@ function ViewTypes() {
     return (
         <div className="grid grid-cols-2 py-4 place-items-center md:grid-cols-3">
           {
-              productsType.map(product=><Products key={product.id} type product={product}/>)
+              loading ? <h2>Loading...</h2>
+              : productsType.map(product=><Products key={product.id} type product={product}/>)
           }
         </div>
     )

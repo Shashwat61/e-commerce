@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom'
 import { getSingleProduct } from '../../redux/actions/product.actions'
 
 function Products({product,type}) {
-    console.log(type)
+    
     const history=useHistory()
     const dispatch=useDispatch()
    

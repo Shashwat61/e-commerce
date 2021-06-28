@@ -12,6 +12,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      screens:{
+        breakpointmedium:'920px',
+      },
       colors:{
         bordercolor:'#4c4c4c',
       },

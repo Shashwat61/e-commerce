@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { addToCart } from '../../redux/actions/product.actions'
 
 function SingleItem() {
+    const dispatch=useDispatch()
     const {singleProduct:{id,image,title,price,description}}=useSelector(state=>state.product)
+    function handleClick(){
+        dispatch(addToCart(id))
+    }
     return (
         <div className="px-8 py-16 sm:py-32">
              
@@ -19,7 +24,7 @@ function SingleItem() {
                          <span className="">${price}</span>
                          
                     </div>
-                   <button className="w-full p-4 mt-4 transition duration-500 ease-in-out border border-black rounded-sm md:px-2 md:py-4 md:mt-16 hover:bg-black hover:text-gray-100 focus:outline-none">Add To Cart</button>
+                   <button onClick={handleClick} className="w-full p-4 mt-4 transition duration-500 ease-in-out border border-black rounded-sm md:px-2 md:py-4 md:mt-16 hover:bg-black hover:text-gray-100 focus:outline-none">Add To Cart</button>
                 <div className="pt-8">
                     <h2 className="text-lg font-medium">Description</h2>
                     <p className="text-base ">{description}</p>

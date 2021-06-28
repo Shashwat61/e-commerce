@@ -9,7 +9,7 @@ import Sidebar from './components/sidebar/Sidebar'
 import Footer from './components/footer/Footer';
 import SingleItem from './components/singleitem/SingleItem'
 import ViewTypes from './components/viewtypes/ViewTypes';
-
+import Cart from './components/cart/Cart'
 export const Layout=({children})=>{
   return (
    <div className="mx-4 text-xs sm:text-sm md:text-base">
@@ -51,6 +51,11 @@ const App = () => {
       <Route path='/collection/:type'>
         <Layout>
           <ViewTypes/>
+        </Layout>
+      </Route>
+      <Route path='/cart'>
+        <Layout>
+          <Cart/>
         </Layout>
       </Route>
 

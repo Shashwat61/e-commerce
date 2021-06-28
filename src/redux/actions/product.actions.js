@@ -1,12 +1,12 @@
 import axios from "axios"
-import { FETCH_PRODUCT_FAILED, FETCH_PRODUCT_REQUEST, FETCH_PRODUCT_SUCCESS, FETCH_TYPE_FAILED, FETCH_TYPE_REQUEST, FETCH_TYPE_SUCCESS, GET_SINGLEPRODUCT_ID } from "../actiontypes"
+import { ADD_TO_CART, FETCH_PRODUCT_FAILED, FETCH_PRODUCT_REQUEST, FETCH_PRODUCT_SUCCESS, FETCH_TYPE_FAILED, FETCH_TYPE_REQUEST, FETCH_TYPE_SUCCESS, GET_SINGLEPRODUCT_ID, REMOVE_FROM_CART } from "../actiontypes"
 
 export const fetchProducts=()=>{
     return (dispatch)=>{
         dispatch({
           type:FETCH_PRODUCT_REQUEST
         })
-        axios.get('https://fakestoreapi.com/products?limit=12')
+        axios.get('https://fakestoreapi.com/products/')
         .then((res)=>{
             dispatch({
                 type:FETCH_PRODUCT_SUCCESS,
@@ -52,3 +52,19 @@ export const fetchProductType=(type)=>{
         })
     }
 }
+
+
+export const addToCart=(id)=>{
+ return {
+     type:ADD_TO_CART,
+     payload:id,
+ }
+}
+
+export const removeFromCart=(id)=>{
+ return {
+     type:REMOVE_FROM_CART,
+     payload:id,
+ }
+}
+

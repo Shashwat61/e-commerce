@@ -18,7 +18,7 @@ function Footer() {
                 <h2 className="pb-4 text-lg font-medium">Get to Know</h2>
                 <div>
 
-                <p>Promotions new products and sales.Direclty to your inbox</p>
+                <p className="pb-2">Promotions new products and sales.Direclty to your inbox</p>
                 <form className="flex w-full">
                     <input className="w-full p-2 bg-gray-100 border border-gray-400 rounded rounded-r-none" type="text"  placeholder="Your Email"/>
                     <button className="p-2 font-medium text-gray-200 bg-gray-900 rounded rounded-l-none">Subscribe</button>
