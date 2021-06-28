@@ -8,6 +8,8 @@ import Header from './components/header/Header'
 import Sidebar from './components/sidebar/Sidebar'
 import Footer from './components/footer/Footer';
 import SingleItem from './components/singleitem/SingleItem'
+import ViewTypes from './components/viewtypes/ViewTypes';
+
 export const Layout=({children})=>{
   return (
    <div className="mx-4 text-xs sm:text-sm md:text-base">
@@ -44,6 +46,11 @@ const App = () => {
       <Route path='/view/:id'>
         <Layout>
           <SingleItem/>
+        </Layout>
+      </Route>
+      <Route path='/collection/:type'>
+        <Layout>
+          <ViewTypes/>
         </Layout>
       </Route>
 

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
-// import { getSingleProduct } from '../../redux/actions/product.actions'
 
 function SingleItem() {
     const {singleProduct:{id,image,title,price,description}}=useSelector(state=>state.product)
