@@ -65,7 +65,7 @@ export const productReducer=(state={ products:[],
             newCart=state.cart.filter((item,i)=>i!=arr[0])
             return {
                 ...state,
-               cart:newCart
+               cart:newCart,
             }
         
         default:return state
