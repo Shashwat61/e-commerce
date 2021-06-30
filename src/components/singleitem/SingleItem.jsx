@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../../redux/actions/product.actions'
 
@@ -9,7 +9,7 @@ function SingleItem() {
         dispatch(addToCart(id))
     }
     return (
-        <div className="px-8 py-16 sm:py-32">
+        <div className="layout">
              
              
          <div className="grid md:grid-cols-2">

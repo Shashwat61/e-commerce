@@ -3,9 +3,9 @@ import FeaturedCollection from '../../featuredcollection/FeaturedCollection'
 import ExtraFeaturedCollection from '../../extrafeaturedcollection/ExtraFeaturedCollection'
 function HomeScreen() {
     return (
-        <div className="px-8 py-16 sm:py-32 ">
+        <div className="layout ">
          <FeaturedCollection/>
-         <ExtraFeaturedCollection/>
+         {/* <ExtraFeaturedCollection/> */}
         </div>
     )
 }

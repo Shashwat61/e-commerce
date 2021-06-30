@@ -11,3 +11,14 @@ body{
 body::-webkit-scrollbar{
     display: none;
 }
+@layer components{
+.list{
+   @apply py-3 border-b border-gray-300 cursor-pointer;
+ }
+ .layout{
+     @apply px-8 py-16 sm:py-32;
+ }
+ .loader{
+     @apply grid w-full col-span-full place-items-center;
+ }
+}

@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { getSingleProduct } from '../../redux/actions/product.actions'
 
-function Products({product,type}) {
+function Products({product}) {
     
     const history=useHistory()
     const dispatch=useDispatch()
@@ -15,7 +15,7 @@ function Products({product,type}) {
     }
     return (
         <div onClick={handleClick} className={clsx("grid m-4 cursor-pointer lg:mb-4 max-w-max-content place-items-center")}>
-         <img className="object-contain w-full h-32" src={product.image} alt={product.category}/>
+         <img className="object-contain w-full h-24 sm:h-32" src={product.image} alt={product.category}/>
          <div className="flex flex-col items-center">
              <span>{product.title}</span>
              <span>${product.price}</span>

@@ -5,6 +5,7 @@ import CartItem from '../cartitem/CartItem'
 import {loadStripe} from '@stripe/stripe-js'
 import axios from 'axios'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
+import clsx from 'clsx'
 
 function Cart() {
     const history=useHistory()
@@ -28,8 +29,8 @@ function Cart() {
         if(result.error) alert(result.error.message)
     }
     return (
-        <div className="px-8 py-16 sm:py-32">
-            <h2 className="py-8 text-xl font-medium">Cart Items</h2> 
+        <div className="layout">
+            <h2 className={clsx('py-8 text-xl font-medium',cart.length>0 ? 'block':'hidden')}>Cart Items</h2> 
            {cart.length >0 ?
                cart.map((item,i)=>(
                    <CartItem key={i} item={item}/>
@@ -43,9 +44,9 @@ function Cart() {
                     </div>
            }       
         <div className="grid pt-16 space-y-4 font-medium place-items-center">
-            <h2>SubTotal ${cart.length>0 ? subTotal[0]: '0'}</h2>
+            <h2>SubTotal ${cart.length>0 ? subTotal[0].toFixed(2) : '0'}</h2>
             <button onClick={()=>history.push('/')} className="p-2 border border-black rounded focus:outline-none w-max-content " >Continue Shopping</button>
-            <button onClick={createCheckoutSession} role="link" className="p-2 text-gray-100 bg-black border rounded focus:outline-none border-bordercolor w-max-content" >Checkout</button>
+            <button onClick={createCheckoutSession} role="link" className="p-2 text-gray-100 bg-black border rounded focus:outline-none w-max-content" >Checkout</button>
         </div>
         </div>
     )

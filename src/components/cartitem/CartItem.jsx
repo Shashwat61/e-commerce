@@ -15,7 +15,7 @@ function CartItem({item:{title,description,id,image,price}}) {
     return (
         <div className="grid pb-8 md:grid-cols-3 md:place-items-center">
               <div className="grid md:col-span-1 place-items-center">
-               <img className="object-contain h-72 sm:h-48" src={image} alt=""/>   
+               <img className="object-contain h-64 sm:h-48" src={image} alt=""/>   
               </div>
               <div className="py-8 space-y-4 md:col-span-1">
               <p>{title}</p>
