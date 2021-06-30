@@ -19,7 +19,7 @@ function Header() {
         
         <div onClick={handleClick} className="flex items-center pl-8 cursor-pointer">
           <AiOutlineShoppingCart size={26}/>
-          <span className="pl-2">Cart{cart.length}</span>
+          <span className="pl-2 font-medium whitespace-pre">Cart ({cart.length})</span>
         </div>
         </div>
     )

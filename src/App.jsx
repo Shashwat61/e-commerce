@@ -10,6 +10,7 @@ import Footer from './components/footer/Footer';
 import SingleItem from './components/singleitem/SingleItem'
 import ViewTypes from './components/viewtypes/ViewTypes';
 import Cart from './components/cart/Cart'
+import Success from './components/successpage/Success'
 export const Layout=({children})=>{
   return (
    <div className="mx-4 text-xs sm:text-sm md:text-base">
@@ -57,6 +58,9 @@ const App = () => {
         <Layout>
           <Cart/>
         </Layout>
+      </Route>
+      <Route path='/success'>
+          <Success/>
       </Route>
 
       
